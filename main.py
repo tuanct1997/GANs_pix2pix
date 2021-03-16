@@ -112,6 +112,7 @@ def gan(g_model, d_model):
 
 def convert(data):
 	x_train, x_test = train_test_split(data, test_size=0.2)
+	x_train = x_train.astype('float32')
 	x_train = (x_train - 127.5)/127.5
 
 	return x_train
