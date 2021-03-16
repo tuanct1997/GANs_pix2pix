@@ -138,7 +138,7 @@ def fake_emo(g_model, latent_dim, n_samples):
 	return X,y
 
 # train the generator and discriminator
-def train(g_model, d_model, gan_model, dataset, latent_dim, n_epochs=100, n_batch=64):
+def train(g_model, d_model, gan_model, dataset, latent_dim, n_epochs=1000, n_batch=64):
 	bat_per_epo = int(dataset.shape[0] / n_batch)
 	half_batch = int(n_batch / 2)
 	# manually enumerate epochs
