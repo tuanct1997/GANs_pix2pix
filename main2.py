@@ -178,11 +178,11 @@ num_examples_to_generate = 16
 # to visualize progress in the animated GIF)
 seed = tf.random.normal([num_examples_to_generate, noise_dim])
 train(train_dataset, EPOCHS)
-display_image(EPOCHS)
+#display_image(EPOCHS)
 anim_file = 'dcgan.gif'
 
 with imageio.get_writer(anim_file, mode='I') as writer:
-  filenames = glob.glob('image*.png')
+  filenames = glob.glob('model2_result/image*.png')
   filenames = sorted(filenames)
   for filename in filenames:
     image = imageio.imread(filename)
